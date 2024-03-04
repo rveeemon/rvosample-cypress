@@ -1,0 +1,125 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-29T14:22:14.592Z",
+    "end": "2024-02-29T14:22:21.194Z",
+    "duration": 6602,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "56a2ad59-93b4-4229-a09c-b7d74d663c06",
+      "title": "",
+      "fullFile": "cypress/e2e/Others/myProfile.cy.js",
+      "file": "cypress/e2e/Others/myProfile.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "0b9ed14f-487f-4271-8a5b-f6800fc3c94f",
+          "title": "Navigate to the My Profile page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "960be5aa-0ab3-4a63-8df1-b33ad13b0938",
+              "title": "Edit Profile",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "User must be able to upload the profile image",
+                  "fullTitle": "Navigate to the My Profile page Edit Profile User must be able to upload the profile image",
+                  "timedOut": null,
+                  "duration": 5679,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "//Clicks the My Profile button\ncy.contains('My Profile').click();\n//Makes sure that the button is visible\ncy.contains('Edit Profile').should('be.visible');\n//Makes sure that the user is in the My Profile page\ncy.url().should('include', '/profile');\n//Clicks the Edit Profile button\ncy.contains('Edit Profile').wait(500).click();\ncy.url().should('include', '/profile-edit');\n//cy.contains('Upload photo').should('be.visible').wait(500).click()\ncy.get('#picture').wait(500).attachFile(filePath);\ncy.contains('Save profile').should('be.visible').wait(500).click();\ncy.contains('Remove photo').wait(500);\ncy.xpath(`//img[contains(@src, '${imgPath}')]`).should('not.exist');",
+                  "err": {},
+                  "uuid": "15459b27-e449-4d6a-8421-d347bf57d245",
+                  "parentUUID": "960be5aa-0ab3-4a63-8df1-b33ad13b0938",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "15459b27-e449-4d6a-8421-d347bf57d245"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 5679,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

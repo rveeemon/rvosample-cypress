@@ -1,0 +1,6 @@
+1. Do the following 
+"npx cypress run -b chrome --headless --reporter mochawesome"
+2. Merge them through this 
+"npx mochawesome-merge ./cypress/report/*.json > samplereport.json"
+3. Then make it an HTML file by 
+"npx marge samplereport.json --reportDir ./ --inline"

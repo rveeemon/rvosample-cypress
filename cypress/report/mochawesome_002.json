@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-02-29T14:21:35.924Z",
+    "end": "2024-02-29T14:21:38.986Z",
+    "duration": 3062,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b8fcd997-f92a-4b15-9440-7433ba7caf7c",
+      "title": "",
+      "fullFile": "cypress/e2e/Others/apiTesting.cy.js",
+      "file": "cypress/e2e/Others/apiTesting.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8523f5e3-9057-4196-80f8-c79856ddda53",
+          "title": "API Crud",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "GET",
+              "fullTitle": "API Crud GET",
+              "timedOut": null,
+              "duration": 1745,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'GET',\n  url: home + 'posts'\n}).then(function (response) {\n  expect(response).property('status').to.equal(200);\n  expect(response.body[0]).to.have.property(\"title\", \"sunt aut facere repellat provident occaecati excepturi optio reprehenderit\");\n});",
+              "err": {},
+              "uuid": "7002505f-addb-4cc8-b9db-d60ea3238da2",
+              "parentUUID": "8523f5e3-9057-4196-80f8-c79856ddda53",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "POST",
+              "fullTitle": "API Crud POST",
+              "timedOut": null,
+              "duration": 405,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'POST',\n  url: home + \"posts\",\n  body: {\n    'title': 'lorem ipsum',\n    'body': 'dolor sit amet'\n  },\n  headers: {\n    'content-type': 'application/json'\n  }\n}).then(function (response) {\n  expect(response.body).have.property('title');\n  expect(response.body).have.property('body', 'dolor sit amet');\n});",
+              "err": {},
+              "uuid": "eee77565-4b60-41bb-b3e1-ff217534f59f",
+              "parentUUID": "8523f5e3-9057-4196-80f8-c79856ddda53",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "PATCH",
+              "fullTitle": "API Crud PATCH",
+              "timedOut": null,
+              "duration": 415,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'PATCH',\n  url: home + \"posts/1\",\n  body: {\n    'title': 'Anthem of the Heart'\n  },\n  headers: {\n    'content-type': 'application/json'\n  }\n}).then(function (response) {\n  expect(response.body).have.property('title');\n  expect(response.body).have.property('title', 'Anthem of the Heart');\n  expect(response.body).have.property('body', 'quia et suscipit\\nsuscipit recusandae consequuntur expedita et cum\\nreprehenderit molestiae ut ut quas totam\\nnostrum rerum est autem sunt rem eveniet architecto');\n  console.log(response.body);\n});",
+              "err": {},
+              "uuid": "a9528875-aed1-4520-b623-b94ee7024c0a",
+              "parentUUID": "8523f5e3-9057-4196-80f8-c79856ddda53",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "DELETE",
+              "fullTitle": "API Crud DELETE",
+              "timedOut": null,
+              "duration": 412,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.request({\n  method: 'DELETE',\n  url: home + \"posts/1\",\n  headers: {\n    'content-type': 'application/json'\n  }\n}).then(function (response) {\n  expect(response.body).to.be.empty;\n  console.log(response.body);\n});",
+              "err": {},
+              "uuid": "850fc494-54df-4be5-8de8-b6a4f3edd700",
+              "parentUUID": "8523f5e3-9057-4196-80f8-c79856ddda53",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7002505f-addb-4cc8-b9db-d60ea3238da2",
+            "eee77565-4b60-41bb-b3e1-ff217534f59f",
+            "a9528875-aed1-4520-b623-b94ee7024c0a",
+            "850fc494-54df-4be5-8de8-b6a4f3edd700"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2977,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/report"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
