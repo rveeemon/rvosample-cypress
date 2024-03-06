@@ -5,6 +5,7 @@ const {downloadFile} = require('cypress-downloadfile/lib/addPlugin')
 module.exports = defineConfig({
   projectId: 'iczcf9',
   e2e: {
+    build: "rvocypresstest v0.1",
     //prevent auto reexecute when there are changes
     watchForFileChanges: false,
     defaultCommandTimeout: 5000,
