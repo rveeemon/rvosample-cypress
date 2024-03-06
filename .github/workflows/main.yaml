@@ -4,12 +4,12 @@ jobs:
   install:
     runs-on: ubuntu-latest
     steps:
-      name: Cypress run
-      uses: cypress-io/github-action@v6
       name: Checkout
       uses: actions/checkout@v4
       name: Install modules
       run: npm ci
+      name: Cypress run
+      uses: cypress-io/github-action@v6
       with:
         build: npm run build
         start: npm start
