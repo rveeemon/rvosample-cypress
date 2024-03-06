@@ -1,0 +1,16 @@
+name: Run Sample Cypress Test
+on: [push]
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      name: Cypress run
+      uses: cypress-io/github-action@v6
+      name: Checkout
+      uses: actions/checkout@v4
+      with:
+        browser: chrome
+        headless: true
+        build: npm run build
+        start: npm start
+      
