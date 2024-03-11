@@ -27,7 +27,7 @@ describe('Shopist', () => {
       cy.get('a').should('have.class', 'a-exact-active chairs')
 
       // Make sure that the item is in that page
-      cy.contains('Wicker Chairs').should('be.visible')
+      cy.contains('Wicker Chair').should('be.visible')
 
       //Makes sure that the URL includes sofas
       cy.url().should('include', '/chairs')
